@@ -13,6 +13,7 @@ $(document).ready(function(){
 	//array_button.textContent = "Hide the array"
 	//test comment
 	//test
+	//test 08/31/2018
 
 	
 
