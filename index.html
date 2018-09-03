@@ -5,6 +5,8 @@
 	<head>
 		<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript" src = "example.js"></script> <!-- javascript -->
+		<script type="text/javascript" src = "functions.js"></script> <!-- javascript -->
+
 		<link rel= "stylesheet" type = "text/css" href = "style.css">
 	</head>
 
@@ -47,42 +49,43 @@
 
 		<br>
 		<!-- -------------------------------------------------->
-		<button type = "submit" id = "size_button"> Create the array! </button>
+		<button type = "submit" id = "create_array_button"> Create the array! </button>
 		<!-- -------------------------------------------------->
 		<br>
 		<br>
 		<br>
 
-
-
-
-
-
 		<br>
-		<button id = "array_button"> Show the array </button>
+		<button id = "show_array_button"> Show the array </button>
 
 		<p id = "the_array" class = "an_array"> </p>
+
+
 		<br>
 		<br>
 		<br>
 		<!-- -------------------------------------------------->
 
-		<form id = "Algorithms">
-			Insert:  </div>
+
+		<div id = "Algorithms">
+			<span id = "Algorithm_selection"> Choose the algorithms to compare! </span> <br>
 			<br>
-			<div id = "Bubble"> Bubble </div>
+			<input type="checkbox" value="Insert" id = "Insert"> Insert <br>
 			<br>
-			<div id = "Merge"> Merge </div>
+			<input type="checkbox" value="Bubble" id = "Bubble"> Bubble <br>
 			<br>
-			<div id = "Quick"> Quick </div>
+			<input type="checkbox" value="Merge" id = "Merge"> Merge <br>
 			<br>
-			<div id = "Select"> Select </div>
-		</form>
+			<input type="checkbox" value="Quick" id = "Quick"> Quick <br>
+			<br>
+			<input type="checkbox" value="Select" id = "Select"> Select <br>
+
+		</div>
 		<br>
 		<br>
 
 		<!-- -------------------------------------------------->
-		<button id = "Sort"> Sort! </button>
+		<button id = "sort_button"> Sort! </button>
 		<br>
 		<br>
 		<br>

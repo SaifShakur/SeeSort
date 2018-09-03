@@ -7,7 +7,8 @@ var display = false;
 
 var type_of_array = null;
 var order_of_array = null;
-var array_size = 0;
+var size_of_array = 0;
+var algorithms = [false, false, false, false, false];
 
 $(document).ready(function(){
 
@@ -36,10 +37,10 @@ $(document).ready(function(){
 
 
 	//used to toggle between displaying/hiding the array
-	$("#array_button").click(function(){
+	$("#show_array_button").click(function(){
 
 		console.log(display);
-		console.log(array_size);
+		console.log(size_of_array);
 
 		if(display === false){
 			$("#the_array").show();
@@ -56,12 +57,45 @@ $(document).ready(function(){
 
 
 	// //used for the user's submission of the size of the array
-	$("#size_button").click(function(){
-		array_size = $("#size_of_array").val();
-		console.log(array_size);
-		$("#size_of_array").val("");
+	$("#create_array_button").click(function(){
+
+		size_of_array = Number($("#size_of_array").val());
+
+		console.log(size_of_array);
+		//$("#size_of_array").val("");	
+
+		console.log("i'm creating the array");
+
+		//GenerateArray(user_array, size_of_array);
+
+		if(type_of_array === "Random")
+			Generate_Random_Array(user_array, size_of_array);
+		else if(type_of_array === "Sorted"){
+			console.log(size_of_array);
+			Generate_Sorted_Array(user_array, size_of_array);
+		}
+
+		console.log(user_array);
+
+
+		/*
+
+			essentially, if it's random, then we create a random array of size (size)
+				else, if it's sorted, make a sorted array of size (blah blah)
+
+		*/
+
+
 	});
 
+	$("#sort_button").click(function(){
+
+		/*
+			based on the order_of_array, 
+		*/
+		//sort(order_of_array, algorithms);
+
+	})
 
 
 });
@@ -73,3 +107,18 @@ $(document).ready(function(){
 */
 
 
+/*
+Notes: 
+
+09-03-2018
+-need to make functions:
+	-Generate_Random_Array(user_array)
+	-Generate_Sorted_Array(user_array)
+	-VerifyOrder(user_array, order_of_array); 	//returns true or false if the sorted array is properly sorted 
+												//	according to user's order input
+
+
+
+
+
+*/
