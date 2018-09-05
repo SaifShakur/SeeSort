@@ -10,8 +10,8 @@ var order_of_array = null;
 var size_of_array = 0;
 var algorithms = [false, false, false, false, false];
 
-$(document).ready(function(){
 
+$(document).ready(function(){
 
 	$("#the_array").text(user_array);
 
@@ -52,7 +52,6 @@ $(document).ready(function(){
 			$(this).text("Show the array");
 			display = false;
 		}
-
 	});
 
 
@@ -77,25 +76,19 @@ $(document).ready(function(){
 
 		console.log(user_array);
 
-
-		/*
-
-			essentially, if it's random, then we create a random array of size (size)
-				else, if it's sorted, make a sorted array of size (blah blah)
-
-		*/
-
-
 	});
+
 
 	$("#sort_button").click(function(){
 
+		console.log("yoo");
+		Atleast_One_Algorithm();
 		/*
 			based on the order_of_array, 
 		*/
 		//sort(order_of_array, algorithms);
 
-	})
+	});
 
 
 });
@@ -112,10 +105,11 @@ Notes:
 
 09-03-2018
 -need to make functions:
-	-Generate_Random_Array(user_array)
-	-Generate_Sorted_Array(user_array)
 	-VerifyOrder(user_array, order_of_array); 	//returns true or false if the sorted array is properly sorted 
 												//	according to user's order input
+
+09-05-2018
+-fix the checkbox situation
 
 
 

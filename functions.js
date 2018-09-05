@@ -26,3 +26,46 @@ Generate_Sorted_Array = function(user_array, size_of_array){
 
 	$("#the_array").text(user_array);
 }
+
+//HERE 09/05/2018, need to figure out the checkbox situation
+Atleast_One_Algorithm = function(){
+
+	console.log("here");
+	
+
+	if($("#Insert").checked == true)
+		console.log("It works!");
+	else
+		console.log("Welp...");
+
+
+	console.log("now I'm here");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
