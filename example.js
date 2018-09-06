@@ -13,6 +13,32 @@ var algorithms = [false, false, false, false, false];
 
 $(document).ready(function(){
 
+	Atleast_One_Algorithm = function(){
+
+		
+		/*
+
+			-make a class that does the styling change for you:
+				-change background color and boarder color/style
+				-.active
+			document.getElementById("MyElement").classList.add('MyClass');
+
+			document.getElementById("MyElement").classList.remove('MyClass');
+
+			if ( document.getElementById("MyElement").classList.contains('MyClass') )
+
+			document.getElementById("MyElement").classList.toggle('MyClass');
+		*/
+
+		var x = $("#Insert");
+
+		console.log("here");
+		
+		console.log(x);
+
+		console.log("now I'm here");
+	}	
+
 	$("#the_array").text(user_array);
 
 
@@ -110,6 +136,28 @@ Notes:
 
 09-05-2018
 -fix the checkbox situation
+/*
+
+			-make a class that does the styling change for you:
+				-change background color and boarder color/style
+
+			-OR just make the:
+							$("#Insert").on("click", function(e){
+									$("#Insert").classList.remove("active")
+									..
+
+									.
+
+								})
+				-.active
+			document.getElementById("MyElement").classList.add('MyClass');
+
+			document.getElementById("MyElement").classList.remove('MyClass');
+
+			if ( document.getElementById("MyElement").classList.contains('MyClass') )
+
+			document.getElementById("MyElement").classList.toggle('MyClass');
+		*/
 
 
 
