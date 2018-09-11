@@ -27,18 +27,31 @@ Generate_Sorted_Array = function(user_array, size_of_array){
 	$("#the_array").text(user_array);
 }
 
+Atleast_One_Algorithm = function(){
+
+	var flag = false;
+	console.log($("#Insert"));
+
+
+	if($("Insert").classList.contains("active"))
+		flag = true;
+	else if($("#Bubble").classList.contains("active"))
+		flag = true;
+		else if($("#Merge").classList.contains("active"))
+			flag = true;
+			else if($("#Quick").classList.contains("active"))
+				flag = true;
+				else if($("#Select").classList.contains("active"))
+					flag = true;
+	if(flag != true)
+		console.log("NOT ONE SELECTED");
+	else
+		console.log("ATLEAST ONE SELECTED");
+
+
+}
+
 //HERE 09/05/2018, need to figure out the checkbox situation
-// Atleast_One_Algorithm = function(){
-
-// 	console.log("here");
-	
-
-// 	console.log($("#Insert").checked);
-
-
-// 	console.log("now I'm here");
-
-// }
 
 
 

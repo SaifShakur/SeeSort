@@ -6,3 +6,17 @@
 	border-color: blue;
 	border-style: dotted;
 }
+
+.active{
+	color: white;
+	background-color: green;
+}
+
+.non_active{
+
+	border-style: solid;
+	border-color: blue;
+	border-size: 2px;
+	color: white;
+	background-color: red;
+}

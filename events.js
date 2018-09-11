@@ -12,32 +12,7 @@ var algorithms = [false, false, false, false, false];
 
 
 $(document).ready(function(){
-
-	Atleast_One_Algorithm = function(){
-
-		
-		/*
-
-			-make a class that does the styling change for you:
-				-change background color and boarder color/style
-				-.active
-			document.getElementById("MyElement").classList.add('MyClass');
-
-			document.getElementById("MyElement").classList.remove('MyClass');
-
-			if ( document.getElementById("MyElement").classList.contains('MyClass') )
-
-			document.getElementById("MyElement").classList.toggle('MyClass');
-		*/
-
-		var x = $("#Insert");
-
-		console.log("here");
-		
-		console.log(x);
-
-		console.log("now I'm here");
-	}	
+	
 
 	$("#the_array").text(user_array);
 
@@ -105,6 +80,77 @@ $(document).ready(function(){
 	});
 
 
+	$("#Insert").click(function(){
+
+		if(this.classList.contains("active")){
+			console.log("IT WAS SELECTED");
+			this.classList.remove("active");
+			this.classList.add("non_active");
+		}
+		else{
+			console.log("It was not selected");
+			this.classList.remove("non_active");
+			this.classList.add("active");
+		}
+	});
+
+	$("#Bubble").click(function(){
+
+		if(this.classList.contains("active")){
+			console.log("IT WAS SELECTED");
+			this.classList.remove("active");
+			this.classList.add("non_active");
+		}
+		else{
+			console.log("It was not selected");
+			this.classList.remove("non_active");
+			this.classList.add("active");
+		}
+	});
+
+	$("#Merge").click(function(){
+
+		if(this.classList.contains("active")){
+			console.log("IT WAS SELECTED");
+			this.classList.remove("active");
+			this.classList.add("non_active");
+		}
+		else{
+			console.log("It was not selected");
+			this.classList.remove("non_active");
+			this.classList.add("active");
+		}
+	});
+
+	$("#Quick").click(function(){
+
+		if(this.classList.contains("active")){
+			console.log("IT WAS SELECTED");
+			this.classList.remove("active");
+			this.classList.add("non_active");
+		}
+		else{
+			console.log("It was not selected");
+			this.classList.remove("non_active");
+			this.classList.add("active");
+		}
+	});
+
+	$("#Select").click(function(){
+
+		if(this.classList.contains("active")){
+			console.log("IT WAS SELECTED");
+			this.classList.remove("active");
+			this.classList.add("non_active");
+		}
+		else{
+			console.log("It was not selected");
+			this.classList.remove("non_active");
+			this.classList.add("active");
+		}
+	});
+
+
 	$("#sort_button").click(function(){
 
 		console.log("yoo");
@@ -134,33 +180,6 @@ Notes:
 	-VerifyOrder(user_array, order_of_array); 	//returns true or false if the sorted array is properly sorted 
 												//	according to user's order input
 
-09-05-2018
--fix the checkbox situation
-/*
-
-			-make a class that does the styling change for you:
-				-change background color and boarder color/style
-
-			-OR just make the:
-							$("#Insert").on("click", function(e){
-									$("#Insert").classList.remove("active")
-									..
-
-									.
-
-								})
-				-.active
-			document.getElementById("MyElement").classList.add('MyClass');
-
-			document.getElementById("MyElement").classList.remove('MyClass');
-
-			if ( document.getElementById("MyElement").classList.contains('MyClass') )
-
-			document.getElementById("MyElement").classList.toggle('MyClass');
-		*/
-
-
-
-
 
 */
+
