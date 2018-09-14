@@ -2,6 +2,10 @@
 // createTimer = function(){
 // };
 
+/*
+Insert Bubble Merge Quick Select
+*/
+
 var user_array = [2, 4, 6, 8];
 var display = false;
 
@@ -10,10 +14,8 @@ var order_of_array = null;
 var size_of_array = 0;
 var algorithms = [false, false, false, false, false];
 
-
 $(document).ready(function(){
 	
-
 	$("#the_array").text(user_array);
 
 
@@ -69,10 +71,10 @@ $(document).ready(function(){
 		//GenerateArray(user_array, size_of_array);
 
 		if(type_of_array === "Random")
-			Generate_Random_Array(user_array, size_of_array);
+			Generate_Array(user_array, size_of_array, "Random");
 		else if(type_of_array === "Sorted"){
 			console.log(size_of_array);
-			Generate_Sorted_Array(user_array, size_of_array);
+			Generate_Array(user_array, size_of_array, "Sorted");
 		}
 
 		console.log(user_array);
@@ -153,8 +155,12 @@ $(document).ready(function(){
 
 	$("#sort_button").click(function(){
 
-		console.log("yoo");
-		Atleast_One_Algorithm();
+		if(Atleast_One_Algorithm()){
+			console.log("Atleast one was selected");
+		}
+		else{
+			console.log("ZERO SORTING ALGORITHMS WERE SELECTED");
+		}
 		/*
 			based on the order_of_array, 
 		*/

@@ -1,27 +1,18 @@
-
 //function that fills the array "user_array" with random numbers from 1 to size "size_of_array"
-Generate_Random_Array = function(user_array, size_of_array){
+Generate_Array = function(user_array, size_of_array, type_of_array){
 
 	user_array.length = 0;
 
-	for(i = 0; i < size_of_array; i++)
-		user_array.push( (Math.floor((Math.random() * size_of_array) + 1)) );
+	if(type_of_array == "Random"){
 
-	$("#the_array").text(user_array);
-}
+		for(i = 0; i < size_of_array; i++)
+			user_array.push( (Math.floor((Math.random() * size_of_array) + 1)) );
+	}
+	else if(type_of_array == "Sorted"){
 
-//function that fills the array "user_array" with numbers from 1 to size "size_of_array"
-Generate_Sorted_Array = function(user_array, size_of_array){
-
-	user_array.length = 0;
-
-	console.log(size_of_array);
-	console.log(size_of_array + 1);
-	console.log(typeof size_of_array);
-
-	for(var i = 1; i < (size_of_array + 1); i++){
-		console.log(i);
-		user_array.push(i);
+		for(var i = 1; i < (size_of_array + 1); i++)
+			user_array.push(i);
+		
 	}
 
 	$("#the_array").text(user_array);
@@ -30,28 +21,21 @@ Generate_Sorted_Array = function(user_array, size_of_array){
 Atleast_One_Algorithm = function(){
 
 	var flag = false;
-	console.log($("#Insert"));
 
-
-	if($("Insert").classList.contains("active"))
+	if($("#Insert").hasClass("active"))
 		flag = true;
-	else if($("#Bubble").classList.contains("active"))
+	else if($("#Bubble").hasClass("active"))
 		flag = true;
-		else if($("#Merge").classList.contains("active"))
+		else if($("#Merge").hasClass("active"))
 			flag = true;
-			else if($("#Quick").classList.contains("active"))
+			else if($("#Quick").hasClass("active"))
 				flag = true;
-				else if($("#Select").classList.contains("active"))
+				else if($("#Select").hasClass("active"))
 					flag = true;
-	if(flag != true)
-		console.log("NOT ONE SELECTED");
-	else
-		console.log("ATLEAST ONE SELECTED");
 
-
+	return (flag ? true : false);
 }
 
-//HERE 09/05/2018, need to figure out the checkbox situation
 
 
 
