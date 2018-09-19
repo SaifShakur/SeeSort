@@ -12,12 +12,11 @@ var display = false;
 var type_of_array = null;
 var order_of_array = null;
 var size_of_array = 0;
-var algorithms = [false, false, false, false, false];
+//var algorithms = [false, false, false, false, false];
 
 $(document).ready(function(){
 	
 	$("#the_array").text(user_array);
-
 
 	$("#Random").click(function(){
 		type_of_array = "Random";
@@ -152,11 +151,41 @@ $(document).ready(function(){
 		}
 	});
 
-
+/*
+Insert Bubble Merge Quick Select
+*/
 	$("#sort_button").click(function(){
 
 		if(Atleast_One_Algorithm()){
+
+
 			console.log("Atleast one was selected");
+
+			if($("#Insert").hasClass("active")){
+
+				var temp_array = user_array.slice();
+
+				insertion_sort(temp_array, order_of_array);
+
+				$("#the_array").text(temp_array);
+			}
+
+
+			if($("#Bubble").hasClass("active")){
+
+			}
+			
+			if($("#Merge").hasClass("active")){
+
+			}
+				
+			if($("#Quick").hasClass("active")){
+
+			}
+			if($("#Select").hasClass("active")){
+				
+			}
+
 		}
 		else{
 			console.log("ZERO SORTING ALGORITHMS WERE SELECTED");

@@ -1,38 +1,37 @@
 //created: 09/03/2018
 
-insertion_sort = function(user_array){
+//Insertion sort from Hackernoon.com: https://hackernoon.com/programming-with-js-insertion-sort-1316df8354f5
+insertion_sort = function(user_array, order_of_array){
 
-	for (var i = 0; i < items.length; i++) {
-    let value = items[i];
-    // store the current item value so it can be placed right
-    for (var j = i - 1; j > -1 && items[j] > value; j--) {
-      // loop through the items in the sorted array (the items from the current to the beginning)
-      // copy each item to the next one
-      items[j + 1] = items[j];
+  if(order_of_array === "Ascending"){
+  	for (var i = 0; i < user_array.length; i++) {
+
+      let value = user_array[i];
+
+      for (var j = i - 1; j > -1 && user_array[j] > value; j--) 
+        user_array[j + 1] = user_array[j];
+      
+      user_array[j + 1] = value;
+
     }
-    // the last item we've reached should now hold the value of the currently sorted item
-    items[j + 1] = value;
   }
+  else if(order_of_array === "Descending"){
+    for (var i = 0; i < user_array.length; i++) {
 
-  return list;
+      let value = user_array[i];
+
+      for (var j = i - 1; j > -1 && user_array[j] < value; j--) 
+        user_array[j + 1] = user_array[j];
+      
+      user_array[j + 1] = value;
+
+    }
+
+  }
 
 }
 
-function insertionSort (items) {
-  for (var i = 0; i < items.length; i++) {
-    let value = items[i]
-    // store the current item value so it can be placed right
-    for (var j = i - 1; j > -1 && items[j] > value; j--) {
-      // loop through the items in the sorted array (the items from the current to the beginning)
-      // copy each item to the next one
-      items[j + 1] = items[j]
-    }
-    // the last item we've reached should now hold the value of the currently sorted item
-    items[j + 1] = value
-  }
 
-  return list
-}
 
 /*
 
