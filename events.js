@@ -153,11 +153,12 @@ $(document).ready(function(){
 
 /*
 Insert Bubble Merge Quick Select
+
+Need to modularize the actual sorting and display
 */
 	$("#sort_button").click(function(){
 
 		if(Atleast_One_Algorithm()){
-
 
 			console.log("Atleast one was selected");
 
@@ -168,21 +169,53 @@ Insert Bubble Merge Quick Select
 				insertion_sort(temp_array, order_of_array);
 
 				$("#the_array").text(temp_array);
+				$("#insert_array").text(temp_array);
+				$("#insert_array").show();
 			}
-
 
 			if($("#Bubble").hasClass("active")){
 
+				var temp_array = user_array.slice();
+
+				bubble_sort(temp_array, order_of_array);
+
+				$("#the_array").text(temp_array);
+				$("#bubble_array").text(temp_array);
+				$("#bubble_array").show();
 			}
 			
 			if($("#Merge").hasClass("active")){
+
+				var temp_array = user_array.slice();
+
+				merge_sort(temp_array, order_of_array);
+
+				$("#the_array").text(temp_array);
+				$("#merge_array").text(temp_array);
+				$("#merge_array").show();
 
 			}
 				
 			if($("#Quick").hasClass("active")){
 
+				var temp_array = user_array.slice();
+
+				quick_sort(temp_array, order_of_array);
+
+				$("#the_array").text(temp_array);
+				$("#quick_array").text(temp_array);
+				$("#quick_array").show();
+
 			}
 			if($("#Select").hasClass("active")){
+
+				var temp_array = user_array.slice();
+
+				insertion_sort(temp_array, order_of_array);
+
+				$("#the_array").text(temp_array);
+				$("#select_array").text(temp_array);
+				$("#select_array").show();
 				
 			}
 

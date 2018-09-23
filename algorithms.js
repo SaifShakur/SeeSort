@@ -31,6 +31,43 @@ insertion_sort = function(user_array, order_of_array){
 
 }
 
+bubble_sort = function(user_array, order_of_array){
+
+	if(order_of_array === "Ascending"){
+		for(let i = 0; i < user_array.length; i++) {
+			for(let j = i; j < user_array.length; j++) {
+				if (user_array[i] > user_array[j]) {
+
+					let temp = user_array[i];
+					user_array[i] = user_array[j];
+					user_array[j] = temp;
+
+				}
+			}
+		}
+	}
+	else if(order_of_array === "Descending"){
+
+		for(let i = 0; i < user_array.length; i++) {
+			for(let j = i; j < user_array.length; j++) {
+				if (user_array[i] < user_array[j]) {
+
+					let temp = user_array[i];
+					user_array[i] = user_array[j];
+					user_array[j] = temp;
+				}
+			}
+		}
+
+	}
+
+}
+
+merge_sort = function(user_array, order_of_array){
+
+	
+}
+
 
 
 /*
